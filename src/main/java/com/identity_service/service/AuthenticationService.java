@@ -67,6 +67,8 @@ public class AuthenticationService {
 
         var token = generateToken(user);
 
+        log.info("Signer key: {}", SIGNER_KEY);
+
         return AuthenticationResponse.builder().token(token).isAuthenticated(true).build();
     }
 
